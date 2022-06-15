@@ -1,0 +1,508 @@
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px; /*original font size for doc, can use rem based off this; */
+  line-height: normal; /* default line height */
+}
+body {
+background-color: #ffffff;
+}
+
+/* Navigation section */
+
+#navigation{
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  
+}
+.title{
+  font-size: 20px;
+  font-weight:bold;
+  text-align:center;
+  align-self: center;
+  margin-left:auto;
+  margin-right:auto;
+  padding-right: 9%;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.navbarleft a { /* for left side of navbar, left of title */
+  color: rgb(71, 71, 71);
+  
+  /* gathered inspiration from W3 Schools*/
+  transition: 0.2s ease-in-out; /* gives text smoother transition into lighter color */ 
+
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+  float:left;
+  display: block;
+  align-items: left;
+  padding: 14px;
+  text-decoration: none;
+
+  overflow: hidden;
+  }
+  
+/*changes colour when hovering*/
+.navbarleft a:hover {
+background-color: #ffffff;
+color: rgb(202, 202, 202);
+  }
+
+
+.navbarright a {
+  color: rgb(71, 71, 71);
+  
+  /* gathered inspiration from W3 Schools*/
+  /* gives text smoother transition into lighter color */ 
+  transition: 0.2s ease-in-out; 
+
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+  float:left;
+  display: block;
+  align-items: right;
+  padding: 14px;
+  text-decoration: none;
+  }
+  
+/*changes colour when hovering*/
+.navbarright a:hover {
+background-color: #ffffff;
+color: rgb(202, 202, 202);
+  }
+
+
+/*media drop down menu styling*/
+.meddropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.meddropdown .meddropbtn {
+  font-size: 10px;  
+  border: none;
+  outline: none;
+  color: rgb(71, 71, 71);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+  /* gathered inspiration from W3 Schools*/
+  transition: 0.2s ease-in-out; /* gives text smoother transition into lighter color */ 
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+}
+.meddropdown .meddropbtn:hover{
+  background-color: #ffffff;
+color: rgb(202, 202, 202);
+}
+
+.meddropdown-content {  /* dropdown menu styling*/
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.meddropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.meddropdown-content a:hover {
+  background-color: #ddd;
+}
+.meddropdown:hover .meddropdown-content {
+  display: block;
+}
+
+/* game elements dropdown menu styling */
+.gamdropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.gamdropdown .gamdropbtn {
+  font-size: 10px;  
+  border: none;
+  outline: none;
+  color: rgb(71, 71, 71);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+  /* gathered inspiration from W3 Schools*/
+  transition: 0.2s ease-in-out; /* gives text smoother transition into lighter color */ 
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+}
+.gamdropdown .gamdropbtn:hover{
+  background-color: #ffffff;
+color: rgb(202, 202, 202);
+}
+.gamdropdown-content {  /* dropdown menu styling*/
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.gamdropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.gamdropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.gamdropdown:hover .gamdropdown-content {
+  display: block;
+}
+
+
+/*development & history dropdown styling */
+.devdropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.devdropdown .devdropbtn {
+  font-size: 10px;  
+  border: none;
+  outline: none;
+  color: rgb(71, 71, 71);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+  /* gathered inspiration from W3 Schools*/
+  transition: 0.2s ease-in-out; /* gives text smoother transition into lighter color */ 
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+}
+.devdropdown .devdropbtn:hover{
+  background-color: #ffffff;
+color: rgb(202, 202, 202);
+}
+.devdropdown-content {  /* dropdown menu styling*/
+  display: none;
+  position:absolute; /* issue where overlaps with image below when screen size is reduced*/
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.devdropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.devdropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.devdropdown:hover .devdropdown-content {
+  display: block;
+}
+
+
+
+/*reception dropdown menu styling */
+.recdropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.recdropdown .recdropbtn {
+  font-size: 10px;  
+  border: none;
+  outline: none;
+  color: rgb(71, 71, 71);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+  /* gathered inspiration from W3 Schools*/
+  transition: 0.2s ease-in-out; /* gives text smoother transition into lighter color */ 
+  background-color: white;
+  text-align:center;
+  cursor: pointer;
+}
+.recdropdown .recdropbtn:hover{
+  background-color: #ffffff;
+color: rgb(202, 202, 202);
+}
+.recdropdown-content {  /* dropdown menu styling*/
+  display: none;
+  position:absolute; /* issue where overlaps with image below when screen size is reduced*/
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.recdropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.recdropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.recdropdown:hover .recdropdown-content {
+  display: block;
+}
+
+
+
+
+/* failed attempt at making the nav section stick to the top of the screen when scrolling */
+.sticky { 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  }
+/* illusion of still image over gif, gif plays when mouse hovers over image */
+
+.static {
+  background: white;
+  position:absolute;
+  display:block;
+  margin-left:24%; /* couldn't use rem here since dimensions need to adapt to screen size */
+  margin-right:24%;
+  width:50%;
+
+}
+.static:hover {
+  opacity:0;
+}
+.active { 
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
+.ffswing {
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
+.cloudmodel{
+  width: 10.5%;
+  height: 10.5%;
+  display:block;
+  margin-left:30%;
+  margin-right:10%;
+}
+.aerithmodel{
+  width: 7%;
+  height: 7%;
+  display:block;
+  margin-left:10%;
+  margin-right:30%;
+  margin-top:3%;
+}
+.twomodels{  /* cloud and aerith pictured as clothing models */
+  margin-top: 5%;
+  display:flex;
+}
+.modeldesc{
+  margin-bottom: 2%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.charbtn{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  background-color:black;
+  border-radius:20%;
+  width: 9%;
+  min-width:fit-content;
+  line-height:350%;
+  height: 30%; 
+  margin-bottom: 1%;
+
+  transition: 0.2s ease-in-out;  /* added color transition for button similar to subsection titles */
+}
+.charbtn:hover{
+  background-color: #ffffff;
+color: rgb(202, 202, 202);
+cursor: pointer;
+}
+.charbtndesc{
+  text-align:center;
+  display:block;
+  margin:auto;
+}
+
+
+.imggallery{ /* start of img gallery on homepage*/
+  text-align:center;
+  display:block;
+  margin:auto;
+ margin-bottom:10%;
+}
+.ff1pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff2pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff3pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff4pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff5pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff6pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff7pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.ff8pic{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.models1{ /*row 1 of char models on char screen*/
+  text-align:center;
+  display:inline-block;
+  margin:auto;
+ margin-bottom:10%;
+}
+.cloudmdl{
+  width:15%;
+  height:15%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.tifamdl{
+  width:15.5%;
+  height:15.5%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.barretmdl{
+  width:30%;
+  height:340%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+
+
+.models2 { /*row 1 of char models on char screen*/
+  text-align:center;
+  display:inline-block;
+  margin:auto;
+ margin-bottom:10%;
+}
+.squallmdl{
+  width:30%;
+  height:30%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.vivimdl{
+  width:20%;
+  height:20%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.aerithmdl{
+  width:10%;
+  height:10%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+
+.models3 { /*row 1 of char models on char screen*/
+  text-align:center;
+  display:inline-block;
+  margin:auto;
+  margin-bottom:10%;
+}
+.yunamdl{
+width:30%;
+height:30%;
+margin-top:2%;
+margin-bottom:1%;
+}
+.tidusmdl{
+  width:38%;
+  height:38%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+.lightningmdl{
+  width:23%;
+  height:23%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+
+.footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  margin-top: 0%;
+  margin-bottom:7%;
+}
